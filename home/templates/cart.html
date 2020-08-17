@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load tags_filter %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'index.css' %}">
+{% endblock %}
+
+{% block main_container %}
+<div class="products-container">
+    {% for cart_plant in user_cart %}
+
+    <div class="product">
+        <div class="photos">
+            {% with images=cart_plant.plant|get_images %}
+            {% for image in images %}
+            <img class="photo" src="{{ image.image.url }}" />
+            {% endfor %}
+            {% endwith %}
+
+            <div class="info-1">
+                <div class="price">$ {{ cart_plant.plant.price }}</div>
+                <div class="by">by: {{ cart_plant.plant.manager }}</div>
+            </div>
+
+            <div class="quantity" onclick="addToCart('{{ plant.id }}')">Quantity: {{cart_plant.quantity}}</div>
+
+        </div>
+
+        <div class="image-nav">
+
+            {% with images=cart_plant.plant|get_images %}
+            {% for image in images %}
+            <div onmouseover="imageScroll(this, {{ forloop.counter }} )" class="point"></div>
+            {% endfor %}
+            {% endwith %}
+        </div>
+
+        <div class="title">
+            {{ cart_plant.plant.name }}
+        </div>
+
+        <div class="description">
+            {{ cart_plant.plant.description }}
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+
+<a class="place-order" href="/place-order/">Place Order</a>
+
+<style>.main-container{flex-direction: column;}</style>
+{% endblock %}

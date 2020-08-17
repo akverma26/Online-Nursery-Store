@@ -1,0 +1,217 @@
+.main-container {
+  margin-top: 80px;
+  padding: 20px;
+  padding-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products-container {
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.product {
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  background: white;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  cursor: pointer;
+  margin: auto;
+  margin: 20px;
+}
+
+.product > div {
+  padding: 0 10px;
+}
+
+.product .photos {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.product .photos .photo {
+  min-width: 300px;
+  max-width: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.product .photos .info-1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 10px 20px;
+  padding-top: 50px;
+  color: white;
+}
+
+.product .photos .by {
+  font-size: 0.7rem;
+}
+
+.product .photos .add {
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: white;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-transform: translate(0, calc(-100% - 20px));
+          transform: translate(0, calc(-100% - 20px));
+  border-radius: 3px;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.product .photos .quantity {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: white;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-radius: 3px;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.product .photos:hover .add {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.product .image-nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 8px;
+}
+
+.product .image-nav .point {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #555;
+  border-radius: 100%;
+  margin-left: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.product .image-nav .point-curr {
+  background: #8c8cff;
+}
+
+.product .image-nav .point:hover {
+  background: #8cff8c;
+}
+
+.product .title {
+  margin-top: 3px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.product .description {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #555;
+  padding-bottom: 10px;
+}
+
+.place-order {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  background: rgba(130, 0, 130, 0.8);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(130, 0, 130, 0.8)), to(rgba(150, 0, 150, 0.8)));
+  background: linear-gradient(rgba(130, 0, 130, 0.8), rgba(150, 0, 150, 0.8));
+  color: white;
+  padding: 10px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  text-decoration: none;
+}
+
+.place-order:hover {
+  letter-spacing: 1px;
+}
+
+.dispatch-orders {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  background: rgba(0, 0, 130, 0.8);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 130, 0.8)), to(rgba(0, 0, 150, 0.8)));
+  background: linear-gradient(rgba(0, 0, 130, 0.8), rgba(0, 0, 150, 0.8));
+  color: white;
+  padding: 10px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  text-decoration: none;
+}
+
+.dispatch-orders:hover {
+  letter-spacing: 1px;
+}
+/*# sourceMappingURL=index.css.map */

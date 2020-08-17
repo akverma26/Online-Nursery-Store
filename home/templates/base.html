@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nursery Market</title>
+    <link rel="stylesheet" href={% static "main.css" %}>
+    {% block head %} {% endblock %}
+    <!-- <link rel="stylesheet" href="../static/main.css" /> -->
+</head>
+
+<body>
+    <header>
+        <a class="logo clickable-letter-spacing" href="/">NurseryMarket</a>
+        <div class="right-nav-bar">
+            {% if is_manager %}
+            <a class="received-orders" href="/received-orders/">Received Order</a>
+            <a class="new-plant" href="/add-plant/">+ Add New Plant</a>
+            {% endif %}
+            {% if not logged_in %}
+            <a class="login" href="/login/">Login</a>
+            <div class="signup">
+                Signup
+                <div class="signup-options">
+                    <a href="/signup/">as Customer</a>
+                    <a href="/signup-as-manager/">as Manager</a>
+                </div>
+            </div>
+            {% else %}
+            <a class="cart" href="/cart/">View Cart</a>
+            <a class="logout" href="/logout/">Logout</a>
+            {% endif %}
+        </div>
+    </header>
+
+    {% if logged_in %}
+    <div class="user">Logged in as: {{ user }}</div>
+    {% endif %}
+
+    <div class="main-container">
+        {% block main_container %} {% endblock %}
+    </div>
+
+    <script src="{% static 'main.js' %}"></script>
+</body>
+
+</html>

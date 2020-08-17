@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href={% static "form.css" %}>
+{% endblock %}
+
+{% block main_container %}
+<form action="/create-manager/" method="post" class="form">
+    {% csrf_token %}
+    {{ form.email }}
+    {{ form.username }}
+    {{ form.name }}
+    {{ form.password1 }}
+    {{ form.password2 }}
+    <input type="submit" value="Singup" class="button">
+</form>
+{% endblock %}

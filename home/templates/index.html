@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load tags_filter %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'index.css' %}">
+{% endblock %}
+
+{% block main_container %}
+<div class="products-container">
+    {% for plant in plants %}
+
+    <div class="product">
+        <div class="photos">
+            {% with images=plant|get_images %}
+            {% for image in images %}
+            <img class="photo" src="{{ image.image.url }}" />
+            {% endfor %}
+            {% endwith %}
+
+            <div class="info-1">
+                <div class="price">$ {{ plant.price }}</div>
+                <div class="by">by: {{ plant.manager }}</div>
+            </div>
+
+            <div class="add" onclick="addToCart('{{ plant.id }}')">Add to cart</div>
+        </div>
+
+        <div class="image-nav">
+
+            {% with images=plant|get_images %}
+            {% for i in images %}
+            <div onmouseover="imageScroll(this, {{ forloop.counter }} )" class="point"></div>
+            {% endfor %}
+            {% endwith %}
+        </div>
+
+        <div class="title">
+            {{ plant.name }}
+        </div>
+
+        <div class="description">
+            {{ plant.description }}
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+{% endblock %}

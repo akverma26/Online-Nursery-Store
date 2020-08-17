@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+html {
+  color: #323232;
+}
+
+.user {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: #555;
+  font-size: 12px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 10px 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+header .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #333;
+}
+
+header .right-nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .right-nav-bar .received-orders {
+  background: rgba(130, 0, 130, 0.8);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(150, 0, 150, 0.8)), to(rgba(130, 0, 130, 0.8)));
+  background: linear-gradient(rgba(150, 0, 150, 0.8), rgba(130, 0, 130, 0.8));
+  color: white;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+header .right-nav-bar .received-orders:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+header .right-nav-bar .new-plant {
+  background: rgba(0, 130, 130, 0.8);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 150, 150, 0.8)), to(rgba(0, 130, 130, 0.8)));
+  background: linear-gradient(rgba(0, 150, 150, 0.8), rgba(0, 130, 130, 0.8));
+  color: white;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+header .right-nav-bar .new-plant:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+header .right-nav-bar .login {
+  background: rgba(0, 130, 0, 0.8);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 150, 0, 0.8)), to(rgba(0, 130, 0, 0.8)));
+  background: linear-gradient(rgba(0, 150, 0, 0.8), rgba(0, 130, 0, 0.8));
+  color: white;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+header .right-nav-bar .login:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+header .right-nav-bar .logout {
+  background: rgba(130, 0, 0, 0.8);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(130, 0, 0, 0.8)), to(rgba(150, 0, 0, 0.8)));
+  background: linear-gradient(rgba(130, 0, 0, 0.8), rgba(150, 0, 0, 0.8));
+  color: white;
+  padding: 10px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+header .right-nav-bar .logout:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+header .right-nav-bar .signup {
+  background: rgba(130, 0, 0, 0.8);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 150, 0.8)), to(rgba(0, 0, 130, 0.8)));
+  background: linear-gradient(rgba(0, 0, 150, 0.8), rgba(0, 0, 130, 0.8));
+  color: white;
+  padding: 10px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+header .right-nav-bar .signup .signup-options {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+  -webkit-transform: translate(0, calc(100% + 15px));
+          transform: translate(0, calc(100% + 15px));
+  background: white;
+  width: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 0;
+  -webkit-transform: translate(100%, calc(100% + 15px));
+          transform: translate(100%, calc(100% + 15px));
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+header .right-nav-bar .signup .signup-options a {
+  text-decoration: none;
+  background: #333;
+  color: white;
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 3px;
+  text-align: center;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+header .right-nav-bar .signup .signup-options a:first-child {
+  margin-top: 0;
+}
+
+header .right-nav-bar .signup .signup-options a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+header .right-nav-bar .signup .signup-options::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 15px;
+  width: 15px;
+  background: white;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translate(-15px, -50%) rotate(45deg);
+          transform: translate(-15px, -50%) rotate(45deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  z-index: -3;
+}
+
+header .right-nav-bar .signup:hover .signup-options {
+  -webkit-transform: translate(0, calc(100% + 15px));
+          transform: translate(0, calc(100% + 15px));
+  opacity: 1;
+}
+
+header .right-nav-bar a {
+  color: inherit;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  text-decoration: none;
+}
+
+header .right-nav-bar .cart {
+  background: rgba(130, 130, 0, 0.8);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(130, 130, 0, 0.8)), to(rgba(150, 150, 0, 0.8)));
+  background: linear-gradient(rgba(130, 130, 0, 0.8), rgba(150, 150, 0, 0.8));
+  color: white;
+  padding: 10px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+header .right-nav-bar .cart:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+header .right-nav-bar > div,
+header .right-nav-bar > a {
+  margin-left: 20px;
+}
+
+.main-container {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.clickable-translateY {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.clickable-translateY:hover {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.clickable-letter-spacing {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.clickable-letter-spacing:hover {
+  letter-spacing: 3px;
+}
+
+.clickable-scale {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.clickable-scale:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+/*# sourceMappingURL=main.css.map */

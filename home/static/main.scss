@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+html {
+    // background: radial-gradient(rgb(255, 255, 255), rgb(240, 240, 240)) fixed no-repeat;
+    color: rgb(50, 50, 50);
+}
+
+.user {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: #555;
+    font-size: 12px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    background: white;
+
+    .logo {
+        font-weight: bold;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .right-nav-bar {
+        display: flex;
+
+        .received-orders {
+            background: rgba(130, 0, 130, 0.8);
+            background: linear-gradient(rgba(150, 0, 150, 0.8),
+                    rgba(130, 0, 130, 0.8));
+            color: white;
+            padding: 10px 20px;
+            // box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+            cursor: pointer;
+            transition: 0.3s ease-out;
+
+        }
+
+        .received-orders:hover {
+            transform: scale(1.1);
+        }
+
+        .new-plant {
+            background: rgba(0, 130, 130, 0.8);
+            background: linear-gradient(rgba(0, 150, 150, 0.8),
+                    rgba(0, 130, 130, 0.8));
+            color: white;
+            padding: 10px 20px;
+            // box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+            cursor: pointer;
+            transition: 0.3s ease-out;
+
+        }
+
+        .new-plant:hover {
+            transform: scale(1.1);
+        }
+
+        .login {
+            background: rgba(0, 130, 0, 0.8);
+            background: linear-gradient(rgba(0, 150, 0, 0.8),
+                    rgba(0, 130, 0, 0.8));
+            color: white;
+            padding: 10px 20px;
+            // box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+            cursor: pointer;
+            transition: 0.3s ease-out;
+        }
+
+        .login:hover {
+            transform: scale(1.1);
+        }
+
+        .logout {
+            background: rgba(130, 0, 0, 0.8);
+            background: linear-gradient(rgba(130, 0, 0, 0.8),
+                    rgba(150, 0, 0, 0.8));
+            color: white;
+            padding: 10px 30px;
+            // box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+            cursor: pointer;
+            position: relative;
+            transition: 0.3s ease-out;
+
+        }
+
+        .logout:hover {
+            transform: scale(1.1);
+        }
+
+        .signup {
+            background: rgba(130, 0, 0, 0.8);
+            background: linear-gradient(rgba(0, 0, 150, 0.8),
+                    rgba(0, 0, 130, 0.8));
+            color: white;
+            padding: 10px 30px;
+            // box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+            cursor: pointer;
+            position: relative;
+            transition: 0.3s ease-out;
+
+            .signup-options {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+                transform: translate(0, calc(100% + 15px));
+                background: white;
+                width: 180px;
+                display: flex;
+                flex-direction: column;
+                opacity: 0;
+                transform: translate(100%, calc(100% + 15px));
+                transition: 0.3s ease-out;
+                transition-delay: 0.5s;
+
+                a {
+                    text-decoration: none;
+                    background: #333;
+                    color: white;
+                    display: block;
+                    margin-top: 20px;
+                    padding: 10px 20px;
+                    border-radius: 3px;
+                    text-align: center;
+                    transition: 0.3s ease-out;
+                }
+
+                a:first-child {
+                    margin-top: 0;
+                }
+
+                a:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .signup-options::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 15px;
+                width: 15px;
+                background: white;
+                box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+                transform: translate(-15px, -50%) rotate(45deg);
+                transform-origin: center;
+                z-index: -3;
+            }
+        }
+
+        .signup:hover .signup-options {
+            transform: translate(0, calc(100% + 15px));
+            opacity: 1;
+        }
+
+        a {
+            color: inherit;
+            transition: 0.3s ease-out;
+            text-decoration: none;
+        }
+
+        .cart {
+            background: rgba(130, 130, 0, 0.8);
+            background: linear-gradient(rgba(130, 130, 0, 0.8),
+                    rgba(150, 150, 0, 0.8));
+            color: white;
+            padding: 10px 30px;
+            // box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+            cursor: pointer;
+            position: relative;
+            transition: 0.3s ease-out;
+        }
+
+        .cart:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .right-nav-bar>div,
+    .right-nav-bar>a {
+        margin-left: 20px;
+    }
+}
+
+.main-container {
+    margin-top: 80px;
+    padding: 20px;
+}
+
+
+
+.clickable-translateY {
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.clickable-translateY:hover {
+    transform: translateY(3px);
+}
+
+.clickable-letter-spacing {
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.clickable-letter-spacing:hover {
+    letter-spacing: 3px;
+}
+
+.clickable-scale {
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.clickable-scale:hover {
+    transform: scale(1.1);
+}
